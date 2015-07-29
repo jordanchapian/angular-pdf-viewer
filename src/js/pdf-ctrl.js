@@ -109,7 +109,7 @@ angular.module('pdf')
     };
 
     self.goToPage = function(newVal) {
-      if (pdfDoc !== null) {
+      if (pdfDoc !== null && currentPage !== newVal) {
         currentPage = newVal;
         renderPage(newVal);
       }
@@ -134,6 +134,7 @@ angular.module('pdf')
         .then(function (_pdfDoc) {
 
           pdfDoc = _pdfDoc;
+          currentPage = undefined;
           self.goToPage(1);
           $scope.$apply(function() {
             $scope.pageCount = _pdfDoc.numPages;
