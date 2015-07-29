@@ -134,7 +134,7 @@ angular.module('pdf')
         .then(function (_pdfDoc) {
 
           pdfDoc = _pdfDoc;
-          renderPage(1);
+          self.goToPage(1);
           $scope.$apply(function() {
             $scope.pageCount = _pdfDoc.numPages;
           });
