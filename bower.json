@@ -10,7 +10,6 @@
     "pdfjs-dist": "~1.0.925"
   },
   "ignore": [
-    "src",
     ".bowerrc",
     ".gitignore",
     "bower.json",
